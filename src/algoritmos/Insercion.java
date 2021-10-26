@@ -15,7 +15,18 @@ public class Insercion {
 		
 	}
 	public void ordenamiento() {
-		
+		int i,j;
+		Integer aux;
+		for (i = 1; i < arreglo.length-1; i++) {
+			aux = arreglo[i];
+			j = i - 1;
+			while ((j>=0) && (arreglo[j]>aux)) {
+				arreglo[j+1] = arreglo[j];
+				j--;
+			}
+			arreglo[j+1] = aux;
+			
+		}
 	}
 	
 	
@@ -27,7 +38,6 @@ public class Insercion {
 		double timeFin = System.currentTimeMillis();
 		double time = timeFin - timeIni;
 		System.out.println("tiempo en milis: " + time);
-		
 		
 	}
 }
